@@ -1,0 +1,50 @@
+[
+    {
+        "role": "user",
+        "parts": [
+            {
+                "text": "explain how to start nodejs preparetion"
+            }
+        ]
+    },
+    {
+        "role": "model",
+        "parts": [
+            {
+                "text": "To start your Node.js journey, follow these key steps:\n\n1.  **Strengthen JavaScript Fundamentals:** Node.js runs JavaScript on the server. Ensure you have a good grasp of:\n    *   Variables, data types, functions\n    *   Arrays, objects\n    *   Asynchronous JavaScript (callbacks, Promises, `async/await`)\n    *   ES6+ features (arrow functions, template literals, modules)\n\n2.  **Install Node.js and npm:**\n    *   Go to the official website: [nodejs.org](https://nodejs.org/)\n    *   Download and install the **LTS (Long Term Support)** version, which is recommended for most users.\n    *   `npm` (Node Package Manager) is installed automatically with Node.js.\n    *   Verify installation in your terminal: `node -v` and `npm -v`\n\n3.  **Choose a Code Editor:**\n    *   **VS Code** is highly recommended due to its excellent Node.js integration, extensions, and debugger.\n\n4.  **Write Your First \"Hello World\":**\n    *   Create a file, e.g., `app.js`.\n    *   Add `console.log(\"Hello Node!\");`\n    *   Open your terminal in the same directory and run: `node app.js`\n\n5.  **Understand Core Concepts:**\n    *   **Modules:** How to organize your code (`require()` for CommonJS, `import` for ES Modules).\n    *   **Event Loop:** A fundamental concept explaining how Node.js handles asynchronous operations.\n    *   **npm:** Learn basic commands for installing and managing packages (`npm init`, `npm install <package>`, `npm start`).\n\n6.  **Explore Learning Resources:**\n    *   **Official Node.js Docs:** Great for reference.\n    *   **MDN Web Docs:** Excellent for JavaScript concepts.\n    *   **Online Tutorials/Courses:** FreeCodeCamp, Traversy Media (YouTube), Udemy, Coursera often have beginner-friendly Node.js courses.\n\n7.  **Practice Consistently:** Start building small projects to solidify your understanding."
+            }
+        ]
+    },
+    {
+        "role": "user",
+        "parts": [
+            {
+                "text": "Start technical viva interview"
+            }
+        ]
+    },
+    {
+        "role": "model",
+        "parts": [
+            {
+                "text": "Alright. Let's begin.\n\n**Question 1:** What is the primary difference between Node.js and client-side JavaScript?"
+            }
+        ]
+    },
+    {
+        "role": "user",
+        "parts": [
+            {
+                "text": "hello"
+            }
+        ]
+    },
+    {
+        "role": "model",
+        "parts": [
+            {
+                "text": "Hello! Glad you're ready.\n\nMy first question for your technical viva:\n\n**Question 1:** What is the primary difference between Node.js and client-side JavaScript?"
+            }
+        ]
+    }
+]

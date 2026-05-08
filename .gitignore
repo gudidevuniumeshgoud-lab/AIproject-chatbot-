@@ -1,0 +1,5 @@
+GEMINI_API_KEY=AIzaSyDqcdQeDRvigh12qKrdvFb6tI51Mhph8Rc
+PICOVOICE_ACCESS_KEY=rhptuOStlxpoe4eiVMXeJFUcVSqa17hv35zBJdXciv8jL8tACV1cKA==
+TESSERACT_PATH=C:\Program Files\Tesseract-OCR\tesseract.exe
+# Leave blank to use system default, or provide path to chrome.exe
+CHROME_PATH=C:\Program Files\Google\Chrome\Application\chrome.exe

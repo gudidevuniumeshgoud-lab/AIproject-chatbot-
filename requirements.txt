@@ -1,0 +1,13 @@
+customtkinter
+google-generativeai
+google-genai
+python-dotenv
+pyttsx3
+pywin32
+SpeechRecognition
+pvporcupine
+pvrecorder
+pytesseract
+Pillow
+python-docx
+PyPDF2

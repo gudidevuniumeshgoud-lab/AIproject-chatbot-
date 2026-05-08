@@ -1,0 +1,303 @@
+=== NEXUS AI CHAT EXPORT ===
+Timestamp: 2026-05-07 12:23:17
+
+[YOU]: hi
+
+[NEXUS]: Hi there! How can I help you today?
+
+[YOU]: I have uploaded a document: AIproject Report.docx
+
+[NEXUS]: I have analyzed 'AIproject Report.docx'. I'm ready to help you with it. You can now use the action buttons below (Summarize, Generate Notes, etc.) or ask me questions directly.
+
+[YOU]: Start technical viva interview
+
+[NEXUS]: Understood. Let's begin.
+
+**Question 1:** Please describe the primary AI task your project addresses. Is it a classification, regression, clustering, or another type of problem, and how did you frame it as such?
+
+[YOU]: I have uploaded a document: Sample Questions INT219.docx
+
+[NEXUS]: I have analyzed 'Sample Questions INT219.docx'. I'm ready to help you with it. You can now use the action buttons below (Summarize, Generate Notes, etc.) or ask me questions directly.
+
+[YOU]: Generate detailed study notes from this document: Sample Questions INT219
+1.
+Create a webpage that manages user profiles using TypeScript.
+Use HTML and CSS to design a profile section where user details will be displayed. Define a TypeScript interface called User with properties: id, name, email, and role.
+Implement a union type for the role field such as "admin" | "editor" | "viewer" to restrict valid roles.
+Create a function that takes an array of User objects and dynamically renders profile cards on the webpage showing all details.
+
+2.
+Create a webpage that demonstrates form validation using TypeScript.
+Design a registration form with fields: username, email, and password.
+Define a TypeScript type for form data and implement validation rules (e.g., email format, password length).
+Display error messages dynamically below each field and show a success message when the form is valid.
+
+3.
+Create a webpage that demonstrates filtering and searching functionality.
+Provide a list of items (e.g., products or students) and a search input field.
+Define a TypeScript interface for the items with properties like id, name, and description.
+Implement a function that filters the displayed list in real time as the user types in the search box.
+
+4.
+Create a webpage that demonstrates asynchronous data handling using TypeScript.
+Simulate fetching data from an API using Promise or async/await.
+Define a TypeScript interface for the fetched data (e.g., posts with id, title, body).
+Display a loading message while fetching and then dynamically render the data in a styled layout.
+
+5.
+Create a webpage that demonstrates object-oriented programming concepts in TypeScript.
+Define a class Employee with properties such as id, name, and salary, and include a method to calculate annual salary.
+Create multiple employee objects and display their details on the webpage using DOM manipulation.
+Use CSS to format the output in a table or card layout.
+
+
+
+[NEXUS]: Here are detailed study notes based on the "Sample Questions INT219" document, designed to help you understand and prepare for each task.
+
+---
+
+### **1. User Profile Management with TypeScript**
+
+**Goal:** Create a web page to display and manage user profiles dynamically using TypeScript, HTML, and CSS.
+
+**Key Concepts:**
+*   **Data Modeling:** Defining a structured way to represent user data.
+*   **Dynamic Rendering:** Generating HTML content based on data using JavaScript/TypeScript.
+*   **Union Types:** Restricting a property's value to a specific set of predefined literal values.
+
+**TypeScript Specifics:**
+*   **Interface (`User`):**
+    *   Defines the structure for user objects.
+    *   Properties: `id` (number), `name` (string), `email` (string), `role` (union type).
+*   **Union Type for `role`:**
+    *   `"admin" | "editor" | "viewer"`
+    *   Ensures that the `role` property can only hold one of these three specific string values, improving type safety and code readability.
+*   **Function for Rendering:**
+    *   Takes an array of `User` objects (`User[]`).
+    *   Iterates through the array to create and append HTML elements for each user profile.
+
+**HTML & CSS Role:**
+*   **HTML:** Provide a container element (e.g., `div`) where the profile cards will be inserted.
+*   **CSS:** Style the profile section and individual profile cards for an appealing layout (e.g., using flexbox or grid for arrangement, adding borders, padding, etc.).
+
+**Implementation Steps:**
+1.  **HTML Structure:**
+    *   Create `index.html` with a `<div id="profile-container"></div>` where profiles will be displayed.
+2.  **TypeScript Interface & Data:**
+    *   Define the `User` interface with the specified properties and the union type for `role`.
+    *   Create an array of sample `User` objects conforming to this interface.
+3.  **Rendering Function:**
+    *   Write a TypeScript function (e.g., `renderProfiles(users: User[])`) that:
+        *   Gets the `profile-container` element.
+        *   Clears existing content (if any) to prevent duplicates on re-render.
+        *   Loops through the `users` array.
+        *   For each `user`, creates HTML elements (e.g., a `div` for a card, `h3` for name, `p` for email and role).
+        *   Populates these elements with the user's data.
+        *   Appends the created profile card to the `profile-container`.
+4.  **Initial Load:** Call `renderProfiles()` with your sample user data when the page loads (e.g., using `document.addEventListener('DOMContentLoaded', ...)`).
+5.  **Styling:** Add CSS rules to style the `profile-container` and individual profile cards.
+
+---
+
+### **2. Form Validation with TypeScript**
+
+**Goal:** Implement client-side form validation for a registration form using TypeScript, providing real-time feedback.
+
+**Key Concepts:**
+*   **Form Handling:** Capturing user input and managing form submission.
+*   **Input Validation:** Checking user input against predefined rules (e.g., format, length).
+*   **Dynamic Error Messages:** Displaying validation feedback directly on the page.
+
+**TypeScript Specifics:**
+*   **Type Definition (`FormData`):**
+    *   Defines the structure of the data expected from the form fields: `username` (string), `email` (string), `password` (string).
+*   **Validation Functions:**
+    *   Separate functions for each field's validation (e.g., `validateUsername`, `validateEmail`, `validatePassword`).
+    *   These functions should return `true` for valid input and `false` or an error message for invalid input.
+    *   **Email Format:** Use a regular expression (regex) to check for a valid email pattern.
+    *   **Password Length:** Check if the password string meets a minimum length requirement.
+*   **Event Handling:** Attaching event listeners (e.g., `submit` for the form, `input` or `change` for individual fields) to trigger validation.
+
+**HTML & CSS Role:**
+*   **HTML:**
+    *   Design a `<form>` with `<label>` and `<input>` elements for username, email, and password.
+    *   Include `<span class="error-message"></span>` elements next to each input field to display specific error messages.
+    *   Add a `<button type="submit">Register</button>`.
+    *   Include a `div` or `p` element for a global success message.
+*   **CSS:** Style the form, input fields, and especially the error messages (e.g., red text for errors, highlighting invalid input fields with a red border).
+
+**Implementation Steps:**
+1.  **HTML Form:**
+    *   Create `index.html` with the registration form structure, including placeholders for error messages and a success message.
+2.  **TypeScript Event Listeners:**
+    *   Get references to the form and all input fields.
+    *   Attach a `submit` event listener to the form.
+    *   (Optional but good practice) Attach `input` or `blur` event listeners to individual fields for real-time validation.
+3.  **Validation Logic:**
+    *   In the `submit` event handler:
+        *   Prevent the default form submission (`event.preventDefault()`).
+        *   Retrieve values from input fields.
+        *   Call your validation functions for each field.
+        *   Maintain a `isValid` flag.
+        *   If a field is invalid:
+            *   Set `isValid` to `false`.
+            *   Display the specific error message in the corresponding `span`.
+            *   Add an "invalid" class to the input field.
+        *   If valid:
+            *   Clear any error messages and remove "invalid" class.
+    *   If all fields are `isValid` after checking:
+        *   Display the success message.
+        *   (Optional) Clear the form fields.
+        *   (Optional) Simulate data submission (e.g., `console.log(formData)`).
+4.  **Styling:** Use CSS to enhance the form's appearance and clearly differentiate error states.
+
+---
+
+### **3. Filtering and Searching Functionality**
+
+**Goal:** Create a webpage that allows users to filter and search a list of items in real-time as they type.
+
+**Key Concepts:**
+*   **UI Interactivity:** Responding to user input (typing in a search box).
+*   **Data Filtering:** Reducing a dataset based on specific criteria (search term).
+*   **Real-time Updates:** Instantly updating the displayed content as data changes.
+
+**TypeScript Specifics:**
+*   **Interface (`Item`):**
+    *   Defines the structure for each item in the list.
+    *   Properties: `id` (number), `name` (string), `description` (string).
+*   **Filtering Function:**
+    *   Takes an array of `Item` objects and a search string as input.
+    *   Uses array methods like `filter()` to return a new array containing only items whose `name` or `description` (case-insensitively) matches the search string.
+*   **Dynamic List Rendering:** A function to display a given array of items on the webpage.
+
+**HTML & CSS Role:**
+*   **HTML:**
+    *   An `<input type="text" id="search-input">` field.
+    *   A container element (e.g., `<div id="item-list"></div>`) to display the filtered items.
+*   **CSS:** Style the search box and the list items (e.g., cards, list entries) for readability and presentation.
+
+**Implementation Steps:**
+1.  **HTML Structure:**
+    *   Create `index.html` with the search input and the item list container.
+2.  **TypeScript Interface & Data:**
+    *   Define the `Item` interface.
+    *   Create an array of sample `Item` objects.
+3.  **Rendering Function:**
+    *   Write a TypeScript function (e.g., `displayItems(items: Item[])`) that:
+        *   Gets the `item-list` container.
+        *   Clears its current content.
+        *   Iterates through the provided `items` array.
+        *   For each item, creates and appends HTML elements (e.g., `div` for a card, `h4` for name, `p` for description).
+4.  **Initial Display:**
+    *   Call `displayItems()` with the full list of sample items when the page loads.
+5.  **Search Logic:**
+    *   Get a reference to the `search-input` element.
+    *   Attach an `input` event listener to `search-input`.
+    *   Inside the event listener:
+        *   Get the current value from the `search-input` (and convert to lowercase for case-insensitive search).
+        *   If the search term is empty, call `displayItems()` with the original full list.
+        *   Otherwise, filter the original `Item` array using the search term.
+        *   Call `displayItems()` with the filtered results.
+6.  **Styling:** Use CSS to format the search input and the appearance of the item list.
+
+---
+
+### **4. Asynchronous Data Handling with TypeScript**
+
+**Goal:** Demonstrate fetching and displaying data asynchronously from a simulated API using Promises or `async/await` in TypeScript.
+
+**Key Concepts:**
+*   **Asynchronous Programming:** Handling operations that don't block the main thread, like network requests.
+*   **Promises:** Objects representing the eventual completion (or failure) of an asynchronous operation.
+*   **`async/await`:** Syntactic sugar built on Promises, making asynchronous code look and behave more like synchronous code.
+*   **Loading States:** Providing feedback to the user while data is being fetched.
+
+**TypeScript Specifics:**
+*   **Interface (`Post`):**
+    *   Defines the structure of the data expected from the API.
+    *   Properties: `id` (number), `title` (string), `body` (string).
+*   **Async Function (`fetchData`):**
+    *   Marked with the `async` keyword.
+    *   Uses `await` to pause execution until a Promise resolves (simulated API call).
+*   **Promise Simulation:**
+    *   Use `new Promise()` or `Promise.resolve()` combined with `setTimeout()` to simulate a network delay and returning data.
+
+**HTML & CSS Role:**
+*   **HTML:**
+    *   A `<div id="loading-message">Loading data...</div>` initially visible.
+    *   A `<div id="data-container"></div>` to display the fetched content, initially hidden.
+*   **CSS:** Style the loading message and the dynamically rendered data for a clear, organized layout.
+
+**Implementation Steps:**
+1.  **HTML Structure:**
+    *   Create `index.html` with the loading message and data container.
+2.  **TypeScript Interface:**
+    *   Define the `Post` interface.
+3.  **Simulate API Fetch:**
+    *   Create an `async function fetchPosts(): Promise<Post[]>`:
+        *   Show the `loading-message` div.
+        *   Use `await new Promise(resolve => setTimeout(resolve, 2000));` to simulate a 2-second network delay.
+        *   Define an array of sample `Post` objects to be "fetched".
+        *   Return this array.
+4.  **Render Data Function:**
+    *   Write a function (e.g., `renderPosts(posts: Post[])`) that:
+        *   Gets the `data-container`.
+        *   Clears its content.
+        *   Iterates through the `posts` array.
+        *   Creates and appends HTML elements (e.g., `div` for a post, `h3` for title, `p` for body).
+5.  **Main Async Logic:**
+    *   In an `async` block or immediately invoked `async` function:
+        *   Call `const posts = await fetchPosts();`.
+        *   Hide the `loading-message` div.
+        *   Call `renderPosts(posts);`.
+        *   Show the `data-container` div.
+6.  **Styling:** Apply CSS to the loading state and the rendered posts to make them visually distinct and appealing.
+
+---
+
+### **5. Object-Oriented Programming (OOP) in TypeScript**
+
+**Goal:** Demonstrate OOP concepts (classes, objects, methods) by defining an `Employee` class and displaying employee details on a webpage.
+
+**Key Concepts:**
+*   **Classes:** Blueprints for creating objects, encapsulating data (properties) and behavior (methods).
+*   **Objects (Instances):** Realizations of a class, each with its own set of property values.
+*   **Properties:** Data associated with an object.
+*   **Methods:** Functions associated with an object, defining its behavior.
+*   **Encapsulation:** Bundling data and methods that operate on the data within a single unit (the class).
+
+**TypeScript Specifics:**
+*   **Class Definition (`Employee`):**
+    *   Uses the `class` keyword.
+    *   Properties: `id: number`, `name: string`, `salary: number`.
+    *   **Constructor:** A special method `constructor(id: number, name: string, salary: number)` that initializes the object's properties when a new instance is created.
+    *   **Method (`calculateAnnualSalary`):**
+        *   A function within the class that performs an operation related to the object's data.
+        *   Example: `public calculateAnnualSalary(): number { return this.salary * 12; }`.
+*   **Object Instantiation:** Creating new instances of the `Employee` class using the `new` keyword (e.g., `const emp1 = new Employee(1, "Alice", 50000);`).
+
+**HTML & CSS Role:**
+*   **HTML:** A container element (e.g., `<div id="employee-list"></div>` or a `<table>`) where employee details will be displayed.
+*   **CSS:** Format the output in a clear and organized table or card layout.
+
+**Implementation Steps:**
+1.  **HTML Structure:**
+    *   Create `index.html` with a container, such as a `div` or `table` structure, for employee details.
+2.  **TypeScript Class:**
+    *   Define the `Employee` class with `id`, `name`, `salary` properties, and the constructor.
+    *   Implement the `calculateAnnualSalary()` method.
+3.  **Create Objects:**
+    *   Create multiple instances (objects) of the `Employee` class using the `new` keyword, providing different data for each employee.
+4.  **Display Logic:**
+    *   Get a reference to the HTML container (`employee-list`).
+    *   Loop through your array of `Employee` objects.
+    *   For each `employee` object:
+        *   Access its properties (e.g., `employee.name`, `employee.salary`).
+        *   Call its method (e.g., `employee.calculateAnnualSalary()`).
+        *   Dynamically create HTML elements (e.g., `div` for a card, `p` elements for details, or `<tr>` and `<td>` for a table) to display all the information, including the calculated annual salary.
+        *   Append these elements to the HTML container.
+5.  **Styling:** Use CSS to design the output, whether it's a styled table or a series of employee cards.
+
+---
+
